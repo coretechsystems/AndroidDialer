@@ -50,9 +50,7 @@ public abstract class IntentProvider {
         return new IntentProvider() {
             @Override
             public Intent getIntent(Context context) {
-                return new CallIntentBuilder(number)
-                        .setCallInitiationType(LogState.INITIATION_CALL_LOG)
-                        .build();
+                return new Intent(Intent.ACTION_VIEW, Uri.parse("gamechanges://gc"));
             }
         };
     }
