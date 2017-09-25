@@ -79,7 +79,7 @@
 
         <ImageView
             style="@style/CallLogActionIconStyle"
-            android:src="@drawable/ic_person_24dp" />
+            android:src="@drawable/ic_lead_24dp" />
 
         <TextView
             style="@style/CallLogActionTextStyle"
