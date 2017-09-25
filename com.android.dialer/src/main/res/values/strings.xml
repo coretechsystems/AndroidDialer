@@ -57,6 +57,9 @@
     <!-- Label for action to block a number. [CHAR LIMIT=48] -->
     <string name="action_block_number">Block number</string>
 
+    <!-- Label for action to create a lead. [CHAR LIMIT=48] -->
+    <string name="action_create_lead">Add as lead</string>
+
     <!-- Text for snackbar to undo blocking a number. [CHAR LIMIT=64] -->
     <string name="snackbar_number_blocked">
         <xliff:g id="number" example="(555) 555-5555">%1$s</xliff:g> blocked</string>

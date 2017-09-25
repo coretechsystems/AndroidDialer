@@ -23,6 +23,13 @@
         android:layout_height="@dimen/divider_line_thickness"
         android:background="@color/call_log_action_divider" />
 
+    <TextView android:id="@+id/call_detail_action_create_lead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/action_create_lead"
+        android:drawableStart="@drawable/ic_call_detail_lead"
+        style="@style/CallDetailActionItemStyle" />
+
     <TextView android:id="@+id/call_detail_action_block"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
