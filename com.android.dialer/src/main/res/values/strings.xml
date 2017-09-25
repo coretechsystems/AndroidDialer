@@ -692,7 +692,7 @@
     <string name="call_log_action_send_message">Send a message</string>
 
     <!-- Create lead button in call detail -->
-    <string name="call_log_action_create_lead">Add as a lead</string>
+    <string name="call_log_action_create_lead">Add as lead</string>
 
     <!-- Button text for the button displayed underneath an entry in the call log.
          Tapping navigates the user to the call details screen where the user can view details for
