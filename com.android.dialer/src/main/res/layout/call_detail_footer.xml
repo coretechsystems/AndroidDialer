@@ -28,6 +28,8 @@
         android:layout_height="wrap_content"
         android:text="@string/action_create_lead"
         android:drawableStart="@drawable/ic_call_detail_lead"
+        android:drawablePadding="33dp"
+        android:layout_marginLeft="4dp"
         style="@style/CallDetailActionItemStyle" />
 
     <TextView android:id="@+id/call_detail_action_block"
