@@ -41,7 +41,7 @@
     <color name="people_app_theme_color">#363636</color>
 
     <!-- Color of the theme of the Dialer app -->
-    <color name="dialtacts_theme_color">#0288d1</color>
+    <color name="dialtacts_theme_color">#001d2d</color>
 
     <!-- Color of image view placeholder. -->
     <color name="image_placeholder">#DDDDDD</color>
@@ -120,11 +120,11 @@
 
     <!-- Background color of action bars. Ensure this stays in sync with packages/Telephony
          actionbar_background_color. -->
-    <color name="actionbar_background_color">#0fc6dc</color>
+    <color name="actionbar_background_color">#002336</color>
     <!-- Color for icons in the actionbar -->
     <color name="actionbar_icon_color">#ffffff</color>
     <!-- Darker version of the actionbar color. Used for the status bar and navigation bar colors. -->
-    <color name="actionbar_background_color_dark">#008aa1</color>
+    <color name="actionbar_background_color_dark">#001d2d</color>
 
     <color name="tab_ripple_color">@color/tab_accent_color</color>
     <color name="tab_accent_color">#ffffff</color>
