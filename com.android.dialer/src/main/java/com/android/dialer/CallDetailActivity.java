@@ -420,7 +420,7 @@ public class CallDetailActivity extends AppCompatActivity
             DialerUtils.startActivityWithErrorToast(mContext, dialIntent);
         }
         else if (resId == R.id.call_detail_action_create_lead) {
-            Log.d(TAG, "Create new lead to be made");
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("gamechanges://gc")));
         } else {
             Log.wtf(TAG, "Unexpected onClick event from " + view);
         }
