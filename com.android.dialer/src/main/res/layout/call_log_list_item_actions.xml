@@ -74,6 +74,20 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/create_lead_action"
+        style="@style/CallLogActionStyle">
+
+        <ImageView
+            style="@style/CallLogActionIconStyle"
+            android:src="@drawable/ic_person_24dp" />
+
+        <TextView
+            style="@style/CallLogActionTextStyle"
+            android:text="@string/call_log_action_create_lead" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/create_new_contact_action"
         style="@style/CallLogActionStyle">
 

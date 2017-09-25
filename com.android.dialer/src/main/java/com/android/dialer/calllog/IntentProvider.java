@@ -46,6 +46,17 @@ public abstract class IntentProvider {
 
     public abstract Intent getIntent(Context context);
 
+    public static IntentProvider getReturnNewLeadIntentProvider(final String name, final String number) {
+        return new IntentProvider() {
+            @Override
+            public Intent getIntent(Context context) {
+                return new CallIntentBuilder(number)
+                        .setCallInitiationType(LogState.INITIATION_CALL_LOG)
+                        .build();
+            }
+        };
+    }
+
     public static IntentProvider getReturnCallIntentProvider(final String number) {
         return getReturnCallIntentProvider(number, null);
     }

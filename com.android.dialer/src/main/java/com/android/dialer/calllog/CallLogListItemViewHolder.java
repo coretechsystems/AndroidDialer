@@ -98,6 +98,7 @@ public final class CallLogListItemViewHolder extends RecyclerView.ViewHolder
     public VoicemailPlaybackLayout voicemailPlaybackView;
     public View callButtonView;
     public View videoCallButtonView;
+    public View createNewLeadButtonView;
     public View createNewContactButtonView;
     public View addToExistingContactButtonView;
     public View sendMessageView;
@@ -421,6 +422,9 @@ public final class CallLogListItemViewHolder extends RecyclerView.ViewHolder
             createNewContactButtonView = actionsView.findViewById(R.id.create_new_contact_action);
             createNewContactButtonView.setOnClickListener(this);
 
+            createNewLeadButtonView = actionsView.findViewById(R.id.create_lead_action);
+            createNewLeadButtonView.setOnClickListener(this);
+
             addToExistingContactButtonView =
                     actionsView.findViewById(R.id.add_to_existing_contact_action);
             addToExistingContactButtonView.setOnClickListener(this);
@@ -555,8 +559,12 @@ public final class CallLogListItemViewHolder extends RecyclerView.ViewHolder
         if (canPlaceCallToNumber) {
             sendMessageView.setTag(IntentProvider.getSendSmsIntentProvider(number));
             sendMessageView.setVisibility(View.VISIBLE);
+
+            createNewLeadButtonView.setTag(IntentProvider.getReturnNewLeadIntentProvider(info.name, number));
+            createNewLeadButtonView.setVisibility(View.VISIBLE);
         } else {
             sendMessageView.setVisibility(View.GONE);
+            createNewLeadButtonView.setVisibility(View.GONE);
         }
 
         mCallLogListItemHelper.setActionContentDescriptions(this);
@@ -570,6 +578,7 @@ public final class CallLogListItemViewHolder extends RecyclerView.ViewHolder
 
         if(mExtendedBlockingButtonRenderer != null){
             List<View> completeLogListItems = Lists.newArrayList(
+                    createNewLeadButtonView,
                     createNewContactButtonView,
                     addToExistingContactButtonView,
                     sendMessageView,
