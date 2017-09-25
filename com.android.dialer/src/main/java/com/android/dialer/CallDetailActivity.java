@@ -168,6 +168,7 @@ public class CallDetailActivity extends AppCompatActivity
                     PhoneNumberUtil.canPlaceCallsTo(mNumber, mDetails.numberPresentation);
             mCallButton.setVisibility(canPlaceCallsTo ? View.VISIBLE : View.GONE);
             mCopyNumberActionItem.setVisibility(canPlaceCallsTo ? View.VISIBLE : View.GONE);
+            mCreateLeadActionItem.setVisibility(canPlaceCallsTo ? View.VISIBLE : View.GONE);
 
             updateBlockActionItemVisibility(canPlaceCallsTo ? View.VISIBLE : View.GONE);
 
@@ -239,6 +240,7 @@ public class CallDetailActivity extends AppCompatActivity
     private View mEditBeforeCallActionItem;
     private View mReportActionItem;
     private View mCopyNumberActionItem;
+    private View mCreateLeadActionItem;
 
     private Integer mBlockedNumberId;
 
@@ -301,6 +303,9 @@ public class CallDetailActivity extends AppCompatActivity
 
         mCopyNumberActionItem = findViewById(R.id.call_detail_action_copy);
         mCopyNumberActionItem.setOnClickListener(this);
+
+        mCreateLeadActionItem = findViewById(R.id.call_detail_action_create_lead);
+        mCreateLeadActionItem.setOnClickListener(this);
 
         if (getIntent().getBooleanExtra(EXTRA_FROM_NOTIFICATION, false)) {
             closeSystemDialogs();
@@ -413,6 +418,9 @@ public class CallDetailActivity extends AppCompatActivity
             Intent dialIntent = new Intent(Intent.ACTION_DIAL,
                     CallUtil.getCallUri(getDialableNumber()));
             DialerUtils.startActivityWithErrorToast(mContext, dialIntent);
+        }
+        else if (resId == R.id.call_detail_action_create_lead) {
+            Log.d(TAG, "Create new lead to be made");
         } else {
             Log.wtf(TAG, "Unexpected onClick event from " + view);
         }
