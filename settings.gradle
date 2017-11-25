@@ -1,1 +1,2 @@
-include ':com.android.dialer', ':com.android.common', ':com.android.phone.common', ':com.android.contacts.common'
+include ':com.android.dialer', ':com.android.common', ':com.android.phone.common', ':com.android.contacts.common', ':com.android.support.v7.palette'
+include ':com.android.contacts'

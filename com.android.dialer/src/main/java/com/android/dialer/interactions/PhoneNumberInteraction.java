@@ -260,24 +260,24 @@ public class PhoneNumberInteraction implements OnLoadCompleteListener<Cursor> {
     private static final String[] PHONE_NUMBER_PROJECTION = new String[] {
             Phone._ID,                      // 0
             Phone.NUMBER,                   // 1
-            Phone.IS_SUPER_PRIMARY,         // 2
-            RawContacts.ACCOUNT_TYPE,       // 3
-            RawContacts.DATA_SET,           // 4
-            Phone.TYPE,                     // 5
-            Phone.LABEL,                    // 6
-            Phone.MIMETYPE,                 // 7
-            Phone.CONTACT_ID                // 8
+           // Phone.IS_SUPER_PRIMARY,         // 2
+            RawContacts.ACCOUNT_TYPE,       // 2
+            RawContacts.DATA_SET,           // 3
+            Phone.TYPE,                     // 4
+            Phone.LABEL,                    // 5
+            Phone.MIMETYPE,                 // 6
+            Phone.CONTACT_ID                // 7
     };
 
     private static final int _ID = 0;
     private static final int NUMBER = 1;
-    private static final int IS_SUPER_PRIMARY = 2;
-    private static final int ACCOUNT_TYPE = 3;
-    private static final int DATA_SET = 4;
-    private static final int TYPE = 5;
-    private static final int LABEL = 6;
-    private static final int MIMETYPE = 7;
-    private static final int CONTACT_ID = 8;
+    //private static final int IS_SUPER_PRIMARY = 2;
+    private static final int ACCOUNT_TYPE = 2;
+    private static final int DATA_SET = 3;
+    private static final int TYPE = 4;
+    private static final int LABEL = 5;
+    private static final int MIMETYPE = 6;
+    private static final int CONTACT_ID = 7;
 
     private static final String PHONE_NUMBER_SELECTION =
             Data.MIMETYPE + " IN ('"
@@ -413,10 +413,10 @@ public class PhoneNumberInteraction implements OnLoadCompleteListener<Cursor> {
                     mContactId = cursor.getLong(CONTACT_ID);
                 }
 
-                if (mUseDefault && cursor.getInt(IS_SUPER_PRIMARY) != 0) {
+              //  if (mUseDefault && cursor.getInt(IS_SUPER_PRIMARY) != 0) {
                     // Found super primary, call it.
-                    primaryPhone = cursor.getString(NUMBER);
-                }
+                //    primaryPhone = cursor.getString(NUMBER);
+               // }
 
                 PhoneItem item = new PhoneItem();
                 item.id = cursor.getLong(_ID);
